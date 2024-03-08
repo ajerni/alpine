@@ -25,8 +25,12 @@
     }"
   >
     <div class="p-5">
-      <h1 class="text-xl font-bold text-left pl-4 pt-4">
-        Tailwind and Alpine (with PDO mySQL)
+      <h1 class="text-xl font-bold text-left pl-4 pt-4 mb-2">
+        <div class="text-4xl font-thin space-x-4">
+          <strong class="text-yellow-500">T</strong>ailwindCSS
+          <strong class="text-yellow-500">A</strong>lpineJS
+          <strong class="text-yellow-500">P</strong>HP
+        </div>
       </h1>
       <div class="md:flex md:flex-row">
         <div class="w-1/2 border border-green-500 m-4">
@@ -59,11 +63,13 @@
                 />
                 <br />
                 <div class="mb-4">
-                  <span
-                    x-show="testText != '' && testText !== 'Two-way-binding'"
-                    x-text="'You entered: ' + testText"
-                    class="bg-blue-200 p-4 rounded"
-                  ></span>
+                  <div class="min-h-600">
+                    <span
+                      x-show="testText != '' && testText !== 'Two-way-binding'"
+                      x-text="'You entered: ' + testText"
+                      class="bg-blue-200 p-4 rounded"
+                    ></span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -71,9 +77,9 @@
             <div class="flex">
               <section class="mr-auto">
                 <div class="text-xl font-thin space-x-2">
-                  <strong class="text-yellow-500">T</strong>ailwindCSS
-                  <strong class="text-yellow-500">A</strong>lpineJS
-                  <strong class="text-yellow-500">P</strong>HP
+                  <h2 class="font-thin text-yellow-500 mb-2">
+                    Andi's TAP stack:
+                  </h2>
                 </div>
                 <section x-data="{isOpen : false}" class="relative">
                   <button
@@ -162,7 +168,8 @@
                 </template>
               </section>
             </div>
-            <div class="text-9xl text-white">fake height</div>
+            <div class="text-8xl text-white">fake height</div>
+            <div class="text-6xl text-white">fake height</div>
           </div>
         </div>
 
@@ -189,7 +196,7 @@
                 value=""
                 placeholder="Save new value..."
                 name="newValue"
-                class="border rounded p-1 focus mb-2 w-full"
+                class="border rounded p-1 focus mb-1 w-full"
               />
               <br />
               <br />
@@ -200,7 +207,7 @@
                   body: JSON.stringify({ 'newValue': newText }),
                 });
                 "
-                class="w-40 transition p-1 rounded-full shadow focus:outline-none mb-4 bg-blue-500 text-white hover:bg-blue-700"
+                class="w-40 transition p-1 rounded-full shadow focus:outline-none mb-2 bg-blue-500 text-white hover:bg-blue-700 relative -top-2"
               >
                 Save
               </button>
